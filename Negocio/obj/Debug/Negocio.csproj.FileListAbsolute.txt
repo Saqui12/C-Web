@@ -20,3 +20,14 @@ Z:\Repo Github\cursoC\CatalogoNivel3\Negocio\obj\Debug\Negocio.csproj.CoreCompil
 Z:\Repo Github\cursoC\CatalogoNivel3\Negocio\obj\Debug\Negocio.csproj.Up2Date
 Z:\Repo Github\cursoC\CatalogoNivel3\Negocio\obj\Debug\Negocio.dll
 Z:\Repo Github\cursoC\CatalogoNivel3\Negocio\obj\Debug\Negocio.pdb
+Z:\Repo Github\CatalogoNivel3\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+Z:\Repo Github\CatalogoNivel3\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+Z:\Repo Github\CatalogoNivel3\Negocio\obj\Debug\Negocio.dll
+Z:\Repo Github\CatalogoNivel3\Negocio\obj\Debug\Negocio.pdb
+Z:\Repo Github\CatalogoNivel3\Negocio\bin\Debug\Negocio.dll
+Z:\Repo Github\CatalogoNivel3\Negocio\bin\Debug\Negocio.pdb
+Z:\Repo Github\CatalogoNivel3\Negocio\bin\Debug\Datos.dll
+Z:\Repo Github\CatalogoNivel3\Negocio\bin\Debug\Dominio.dll
+Z:\Repo Github\CatalogoNivel3\Negocio\bin\Debug\Datos.pdb
+Z:\Repo Github\CatalogoNivel3\Negocio\bin\Debug\Dominio.pdb
+Z:\Repo Github\CatalogoNivel3\Negocio\obj\Debug\Negocio.csproj.Up2Date

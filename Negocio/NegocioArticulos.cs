@@ -101,6 +101,74 @@ namespace Negocio
             {
                 datos.cerrarConexion();
             }
-        }   
+        }
+
+        public void agregar(Articulos nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearProcedimiento("storedAltaArticulo");
+                datos.setearParametro("@codigo", nuevo.Codigo);
+                datos.setearParametro("@nombre", nuevo.Nombre);
+                datos.setearParametro("@descripcion", nuevo.Descripcion);
+                datos.setearParametro("@idMarca", nuevo.Marca.Id);
+                datos.setearParametro("@idCategoria", nuevo.Categoria.Id);
+                datos.setearParametro("@imagenUrl", nuevo.ImagenUrl);
+                datos.setearParametro("@precio", nuevo.Precio);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+        /*
+        public void modificar(Disco modificado)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("update DISCOS set Titulo = @titulo, CantidadCanciones = @canciones, UrlImagenTapa = @img, IdEstilo = @idEstilo, IdTipoEdicion = @idTipoEdicion Where Id = @id");
+                datos.setearParametro("@titulo", modificado.Titulo);
+                datos.setearParametro("@canciones", modificado.CantidadCanciones);
+                datos.setearParametro("@img", modificado.UrlImagenTapa);
+                datos.setearParametro("@IdEstilo", modificado.Estilo.Id);
+                datos.setearParametro("@IdTipoEdicion", modificado.Edicion.Id);
+                datos.setearParametro("@id", modificado.Id);
+
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void eliminar(int id)
+        {
+            try
+            {
+                AccesoDatos datos = new AccesoDatos();
+                datos.setearConsulta("delete from discos where Id = @Id");
+                datos.setearParametro("Id", id);
+                datos.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }*/
     }
 }

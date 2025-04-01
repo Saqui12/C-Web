@@ -16,3 +16,12 @@ Z:\Repo Github\cursoC\CatalogoNivel3\Datos\obj\Debug\Datos.csproj.CoreCompileInp
 Z:\Repo Github\cursoC\CatalogoNivel3\Datos\obj\Debug\Datos.csproj.Up2Date
 Z:\Repo Github\cursoC\CatalogoNivel3\Datos\obj\Debug\Datos.dll
 Z:\Repo Github\cursoC\CatalogoNivel3\Datos\obj\Debug\Datos.pdb
+Z:\Repo Github\CatalogoNivel3\Datos\bin\Debug\Datos.dll
+Z:\Repo Github\CatalogoNivel3\Datos\bin\Debug\Datos.pdb
+Z:\Repo Github\CatalogoNivel3\Datos\bin\Debug\Dominio.dll
+Z:\Repo Github\CatalogoNivel3\Datos\bin\Debug\Dominio.pdb
+Z:\Repo Github\CatalogoNivel3\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
+Z:\Repo Github\CatalogoNivel3\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+Z:\Repo Github\CatalogoNivel3\Datos\obj\Debug\Datos.csproj.Up2Date
+Z:\Repo Github\CatalogoNivel3\Datos\obj\Debug\Datos.dll
+Z:\Repo Github\CatalogoNivel3\Datos\obj\Debug\Datos.pdb
