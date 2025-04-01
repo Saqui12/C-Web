@@ -4,3 +4,9 @@ Z:\Repo Github\cursoC\TPFinalNivel2_Nunez\Dominio\obj\Debug\Dominio.csproj.Assem
 Z:\Repo Github\cursoC\TPFinalNivel2_Nunez\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 Z:\Repo Github\cursoC\TPFinalNivel2_Nunez\Dominio\obj\Debug\Dominio.dll
 Z:\Repo Github\cursoC\TPFinalNivel2_Nunez\Dominio\obj\Debug\Dominio.pdb
+Z:\Repo Github\CatalogoNivel3\Dominio\bin\Debug\Dominio.dll
+Z:\Repo Github\CatalogoNivel3\Dominio\bin\Debug\Dominio.pdb
+Z:\Repo Github\CatalogoNivel3\Dominio\obj\Debug\dominio.csproj.AssemblyReference.cache
+Z:\Repo Github\CatalogoNivel3\Dominio\obj\Debug\dominio.csproj.CoreCompileInputs.cache
+Z:\Repo Github\CatalogoNivel3\Dominio\obj\Debug\Dominio.dll
+Z:\Repo Github\CatalogoNivel3\Dominio\obj\Debug\Dominio.pdb

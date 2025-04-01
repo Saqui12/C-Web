@@ -14,6 +14,8 @@ namespace Catalogo
         public bool ConfirmaEliminacion { get; set; }
         protected void Page_Load(object sender, EventArgs e)
 		{
+            txtId.Enabled = false;
+
             try
             {
                 if (!IsPostBack)
