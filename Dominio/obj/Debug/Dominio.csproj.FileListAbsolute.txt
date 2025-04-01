@@ -1,0 +1,6 @@
+Z:\Repo Github\cursoC\TPFinalNivel2_Nunez\Dominio\bin\Debug\Dominio.dll
+Z:\Repo Github\cursoC\TPFinalNivel2_Nunez\Dominio\bin\Debug\Dominio.pdb
+Z:\Repo Github\cursoC\TPFinalNivel2_Nunez\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+Z:\Repo Github\cursoC\TPFinalNivel2_Nunez\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+Z:\Repo Github\cursoC\TPFinalNivel2_Nunez\Dominio\obj\Debug\Dominio.dll
+Z:\Repo Github\cursoC\TPFinalNivel2_Nunez\Dominio\obj\Debug\Dominio.pdb
