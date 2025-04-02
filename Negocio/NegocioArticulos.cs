@@ -57,6 +57,53 @@ namespace Negocio
                 datos.cerrarConexion();
             }
         }
+
+        public  object listarConId(string id)
+        {
+            AccesoDatos datos = new AccesoDatos();
+           // List<Articulos> lista = new List<Articulos>();
+            Articulos aux = new Articulos();
+            try
+            {
+                datos.setearConsulta("select ARTICULOS.Id, Codigo, Nombre ,ARTICULOS.Descripcion,M.Descripcion Marca,C.Descripcion Categoria, IdMarca, IdCategoria, ImagenUrl , Precio from ARTICULOS, MARCAS M , CATEGORIAS C WHERE M.Id =ARTICULOS.IdMarca AND ARTICULOS.IdCategoria=C.Id AND ARTICULOS.Id = " + id);
+                datos.ejecutarLectura();
+                while (datos.Lector.Read())
+                {
+                    
+                    aux.Id = (int)datos.Lector["Id"];
+                    aux.Codigo = (string)datos.Lector["Codigo"];
+                    aux.Nombre = (string)datos.Lector["Nombre"];
+                    aux.Descripcion = (string)datos.Lector["Descripcion"];
+
+                    if (!(datos.Lector["ImagenUrl"] is DBNull))
+                        aux.ImagenUrl = (string)datos.Lector["ImagenUrl"];
+
+                    aux.Marca = new Marcas();
+                    aux.Marca.Descripcion = (string)datos.Lector["Marca"];
+                    aux.Marca.Id = (int)datos.Lector["IdMarca"];
+
+                    aux.Categoria = new Categorias();
+                    aux.Categoria.Descripcion = (string)datos.Lector["Categoria"];
+                    aux.Categoria.Id = (int)datos.Lector["IdCategoria"];
+
+                    aux.Precio = (decimal)datos.Lector["Precio"];
+                    //lista.Add(aux);
+                }
+                return aux;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+        }
+
         public  List<Articulos> listarConSP()
         {
             AccesoDatos datos = new AccesoDatos();
@@ -128,19 +175,20 @@ namespace Negocio
                 datos.cerrarConexion();
             }
         }
-        /*
-        public void modificar(Disco modificado)
+        public void modificarConSP(Articulos articulo)
         {
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("update DISCOS set Titulo = @titulo, CantidadCanciones = @canciones, UrlImagenTapa = @img, IdEstilo = @idEstilo, IdTipoEdicion = @idTipoEdicion Where Id = @id");
-                datos.setearParametro("@titulo", modificado.Titulo);
-                datos.setearParametro("@canciones", modificado.CantidadCanciones);
-                datos.setearParametro("@img", modificado.UrlImagenTapa);
-                datos.setearParametro("@IdEstilo", modificado.Estilo.Id);
-                datos.setearParametro("@IdTipoEdicion", modificado.Edicion.Id);
-                datos.setearParametro("@id", modificado.Id);
+                datos.setearProcedimiento("storedModificarArticulo");
+                datos.setearParametro("@codigo", articulo.Codigo);
+                datos.setearParametro("@nombre", articulo.Nombre);
+                datos.setearParametro("@desc", articulo.Descripcion);
+                datos.setearParametro("@img", articulo.ImagenUrl);
+                datos.setearParametro("@idMarca", articulo.Marca.Id);
+                datos.setearParametro("@idCategoria", articulo.Categoria.Id);
+                datos.setearParametro("@id", articulo.Id);
+                datos.setearParametro("@precio", articulo.Precio);
 
                 datos.ejecutarAccion();
             }
@@ -159,16 +207,16 @@ namespace Negocio
             try
             {
                 AccesoDatos datos = new AccesoDatos();
-                datos.setearConsulta("delete from discos where Id = @Id");
-                datos.setearParametro("Id", id);
+                datos.setearConsulta("delete from articulos where id = @id");
+                datos.setearParametro("@id", id);
                 datos.ejecutarAccion();
 
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
-        }*/
+        }       
+          
     }
 }

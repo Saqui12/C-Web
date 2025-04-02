@@ -23,9 +23,24 @@ namespace Catalogo
         protected void filtro_TextChanged(object sender, EventArgs e)
         {
             List<Articulos> lista = (List<Articulos>)Session["listaProductos"];
-            List<Articulos> listaFiltrada = lista.FindAll(x => x.Nombre.ToUpper().Contains(filtro.Text.ToUpper()));
+            List<Articulos> listaFiltrada = lista.FindAll(x => x.Nombre.ToUpper().Contains(txtFiltro.Text.ToUpper()));
             dgvProductos.DataSource = listaFiltrada;
             dgvProductos.DataBind();
+        }
+
+        protected void ddlCampo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void chkAvanzado_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

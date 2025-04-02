@@ -11,7 +11,7 @@ namespace Catalogo
 {
 
 
-    public partial class FormularioProducto
+    public partial class Detalles
     {
 
         /// <summary>
@@ -51,22 +51,22 @@ namespace Catalogo
         protected global::System.Web.UI.WebControls.TextBox txtCodigo;
 
         /// <summary>
-        /// Control ddlMarca.
+        /// Control ddlMarcas.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlMarca;
+        protected global::System.Web.UI.WebControls.TextBox ddlMarcas;
 
         /// <summary>
-        /// Control ddlCategoria.
+        /// Control ddlCategorias.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCategoria;
+        protected global::System.Web.UI.WebControls.TextBox ddlCategorias;
 
         /// <summary>
         /// Control txtPrecio.
@@ -76,51 +76,6 @@ namespace Catalogo
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPrecio;
-
-        /// <summary>
-        /// Control btnAceptar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAceptar;
-
-        /// <summary>
-        /// Control btnEliminar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEliminar;
-
-        /// <summary>
-        /// Control UpdatePanel2.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel2;
-
-        /// <summary>
-        /// Control chkConfirmaEliminacion.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chkConfirmaEliminacion;
-
-        /// <summary>
-        /// Control btnConfirmaEliminar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnConfirmaEliminar;
 
         /// <summary>
         /// Control txtDescripcion.

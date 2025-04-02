@@ -1,10 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Mimaster.Master" AutoEventWireup="true" CodeBehind="Productos.aspx.cs" Inherits="Catalogo.Productos" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Mimaster.Master" AutoEventWireup="true" CodeBehind="Administrar.aspx.cs" Inherits="Catalogo.Administrar" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-             <h1>Lista de Productos</h1>
+                    <h1>Lista de Productos</h1>
     <div class="row">
         <div class="col-6">
             <div class="mb-3">
@@ -56,8 +54,13 @@
         </div>
         <%} %>
     </div>
-            <asp:GridView ID="dgvProductos" CssClass="table table-striped table-sm table-bordered container" AutoGenerateColumns="false" runat="server">
+            <asp:GridView ID="dgvProductos" CssClass="table table-striped table-sm table-bordered container" AutoGenerateColumns="false" 
+                OnSelectedIndexChanged="dgvProductos_SelectedIndexChanged"
+                OnPageIndexChanging="dgvProductos_PageIndexChanging"
+                DataKeyNames="Id"
+                runat="server">
                 <Columns>
+                    <asp:CommandField HeaderText="Modificar" ShowSelectButton="true" SelectText="✍" />
                     <asp:BoundField HeaderText="Nombre" DataField="Nombre" />
                     <asp:BoundField HeaderText="Descripcion" DataField="Descripcion" />
                     <asp:BoundField HeaderText="Marca" DataField="Marca" />
@@ -65,7 +68,6 @@
                     <asp:BoundField HeaderText="Precio" DataField="Precio" />
                 </Columns>
             </asp:GridView>
-     
-
+    <a href="FormularioProducto.aspx" class="btn btn-primary">Agregar</a>   
 
 </asp:Content>

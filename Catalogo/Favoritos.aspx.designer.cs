@@ -11,16 +11,16 @@ namespace Catalogo
 {
 
 
-    public partial class Error
+    public partial class Favoritos
     {
 
         /// <summary>
-        /// Control lblError.
+        /// Control repeater1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblError;
+        protected global::System.Web.UI.WebControls.Repeater repeater1;
     }
 }

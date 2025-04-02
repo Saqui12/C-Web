@@ -1,8 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Mimaster.Master" AutoEventWireup="true" CodeBehind="FormularioProducto.aspx.cs" Inherits="Catalogo.FormularioProducto" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Mimaster.Master" AutoEventWireup="true" CodeBehind="Detalles.aspx.cs" Inherits="Catalogo.Detalles" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" CssClass="container" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     <div class="row m-3">
         <div class="col-6">
@@ -20,38 +20,16 @@
             </div>
             <div class="mb-3">
                 <label for="ddlMarca" class="form-label">Marca </label>
-                <asp:DropDownList ID="ddlMarca" CssClass="form-select" runat="server"></asp:DropDownList>
+                <asp:TextBox runat="server" ID="ddlMarcas" CssClass="form-control" />
             </div>
             <div class="mb-3">
                 <label for="ddlCategoria" class="form-label">Categoria</label>
-                <asp:DropDownList ID="ddlCategoria" CssClass="form-select" runat="server"></asp:DropDownList>
+                <asp:TextBox runat="server" ID="ddlCategorias" CssClass="form-control" />
             </div>
             <div class="mb-3">
                 <label for="txtPrecio" class="form-label">Precio </label>
                 <asp:TextBox runat="server" ID="txtPrecio" CssClass="form-control" />
             </div>
-            <div class="mb-3">
-                <asp:Button Text="Aceptar" ID="btnAceptar" CssClass="btn btn-primary " OnClick="btnAceptar_Click" runat="server" />
-                <%if (Negocio.Seguridad.esAdmin(Session["user"]))
-                    {  %>
-                         <asp:Button Text="Eliminar" ID="btnEliminar" OnClick="btnEliminar_Click1" CssClass="btn btn-danger m-3 ms-5" runat="server" />
-
-                  <%} %>
-                <a href="Administrar.aspx" class="m-5" >Cancelar</a>
-                <asp:UpdatePanel ID="UpdatePanel2" runat="server">
-                    <ContentTemplate>
-                                           
-                        <%if (ConfirmaEliminacion)
-                            { %>
-                        <div class="mb-3">
-                            <asp:CheckBox Text="Confirmar Eliminación" ID="chkConfirmaEliminacion" runat="server" />
-                            <asp:Button Text="Eliminar" ID="btnConfirmaEliminar" OnClick="btnConfirmaEliminar_Click1" CssClass="btn btn-outline-danger" runat="server" />
-                        </div>
-                        <%} %>
-                    </ContentTemplate>
-                </asp:UpdatePanel>                                     
-            </div>
-
         </div>
 
 
@@ -65,15 +43,14 @@
                 <ContentTemplate>
                     <div class="mb-3">
                         <label for="txtImagenUrl" class="form-label">Url Imagen</label>
-                        <asp:TextBox runat="server" ID="txtImagenUrl" CssClass="form-control"
-                            AutoPostBack="true" OnTextChanged="txtImagenUrl_TextChanged" />
+                        <asp:TextBox runat="server" ID="txtImagenUrl" CssClass="form-control" 
+                            AutoPostBack="true" OnTextChanged="txtImagenUrl_TextChanged"/>
                     </div>
                     <asp:Image ImageUrl="https://grupoact.com.ar/wp-content/uploads/2020/04/placeholder.png"
-                        runat="server" ID="imgProducto" Width="60%" />
+                        runat="server" ID="imgProducto" Width="75%" class="m-1 container"/>
                 </ContentTemplate>
             </asp:UpdatePanel>
 
         </div>
     </div>
-
 </asp:Content>

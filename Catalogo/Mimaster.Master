@@ -13,7 +13,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav  class="navbar navbar-expand-lg bg-body-tertiary"  data-bs-theme="dark" >
             <div class="container-fluid">
                 <a class="navbar-brand" href="/Default.aspx">Catalogo</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,22 +22,43 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/Productos.aspx">Productos</a>
+                            <a class="nav-link active" aria-current="page" href="/Default.aspx">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
+                            <a class="nav-link" href="/Productos.aspx">Productos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
+                            <a class="nav-link" href="/Favoritos.aspx">Favoritos</a>
                         </li>
+                 <!--       <li class="nav-item">
+                               <a class="nav-link" href="/MiPerfil.aspx">Mi Perfil</a>
+                        </li>-->
                         <li class="nav-item">
-                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                            <%if (Negocio.Seguridad.esAdmin(Session["user"]))
+                                {  %>
+                                <a class="nav-link"  style="display:block" href="/Administrar.aspx">Administrar</a>
+                            <%}
+                                else
+                                { %>
+                               <a class="nav-link"  style="display:none" href="/Administrar.aspx" >Administrar</a>
+                            <% }%>
                         </li>
                     </ul>
                 </div>
                 <div class="d-flex">
-                    <a href="Login.aspx" class="btn btn-success me-2">Login</a>
-                    <a href="Registrarse.aspx" class="btn btn-outline-primary m-auto">Registrarse</a>
+                    <div class="me-3 nav-item navbar-nav">
+                         <a class="nav-link" href="/MiPerfil.aspx">Mi Perfil</a>
+                   </div>
+                    <%if (Negocio.Seguridad.sessionActiva(Session["user"]))
+                        { %>
+                           <asp:Button ID="btnlogout" CssClass="btn btn-danger btn-outline-dark " runat="server" Onclick="btnlogout_Click" Text="Logout" />
+                     <%}
+                         else
+                         {%>
+                                    <a href="Login.aspx" class="btn btn-success me-2">Login</a>
+                                   <a href="Registrarse.aspx" class="btn btn-outline-primary m-auto">Registrarse</a>
+                        <%}%>
+                    
                 </div>
             </div>
         </nav>

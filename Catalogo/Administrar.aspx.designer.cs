@@ -11,7 +11,7 @@ namespace Catalogo
 {
 
 
-    public partial class Productos
+    public partial class Administrar
     {
 
         /// <summary>
