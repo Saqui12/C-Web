@@ -1,4 +1,5 @@
 ﻿using dominio;
+using Dominio;
 using Negocio;
 using System;
 using System.Collections.Generic;
@@ -32,18 +33,33 @@ namespace Catalogo
             
             if (e.CommandName == "Favorito")
             {
-
-                List<string> favoritos = Session["favoritos"] as List<string> ?? new List<string>();
-
-                string itemId = e.CommandArgument.ToString();
-                
-                if (!favoritos.Contains(itemId))
+                if (!(Seguridad.sessionActiva(Session["user"])))
                 {
-                    favoritos.Add(itemId);
-                    Session.Add("favoritos", favoritos);
+                    Response.Redirect("Login.aspx", false);
                 }
+                else
+                {
+                    List<string> lista = Session["favoritos"] as List<string> ?? new List<string>();
 
+                    string itemId = e.CommandArgument.ToString();
+
+                    if (!lista.Contains(itemId))
+                    {
+                        FavoritosUser fav = new FavoritosUser();
+                        NegocioFavoritos negocio = new NegocioFavoritos();
+                        Usuario individuo = (Usuario)Session["user"];
+
+                        fav.IdUser = individuo.Id;
+                        fav.IdArticulo = int.Parse(itemId);
+                        negocio.agregar(fav);
+
+                        
+                        lista.Add(itemId);
+                        Session.Add("favoritos", lista);
+                    }
+                }               
             }
+
             if (e.CommandName == "Detalle")
             {
                 string id = e.CommandArgument.ToString();

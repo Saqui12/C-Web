@@ -24,7 +24,6 @@ namespace Catalogo
                         txtEmail.ReadOnly = true;
                         txtNombre.Text = user.Nombre;
                         txtApellido.Text = user.Apellido;
-                        txtFechaNacimiento.Text = user.FechaNacimiento.ToString("yyyy-MM-dd");
                         if (!string.IsNullOrEmpty(user.ImagenPerfil))
                             imgNuevoPerfil.ImageUrl = "~/Images/" + user.ImagenPerfil;
                     }
@@ -39,7 +38,36 @@ namespace Catalogo
 
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
+           /* Page.Validate();
+            if (!Page.IsValid)
+            {
+                return;
+            }*/
+               
+            
+            NegocioUsuario negocio = new NegocioUsuario();
+            Usuario user = (Usuario)Session["user"];
+            
+            if (txtImagen.PostedFile.FileName != "")
+            {
+                string ruta = Server.MapPath("./Images/");
+                txtImagen.PostedFile.SaveAs(ruta + "perfil-" + user.Id + ".jpg");
+                user.ImagenPerfil = "perfil-" + user.Id + ".jpg";
+            }
 
+            user.Nombre = txtNombre.Text;
+            user.Email = txtEmail.Text;
+            user.Apellido = txtApellido.Text;
+            Image img = (Image)Master.FindControl("imgAvatar");
+            img.ImageUrl = "~/Images/" + user.ImagenPerfil;
+
+            negocio.actualizar(user);
+            Session.Add("user", user);
+
+            //   Usuario userNuevo = (Usuario)negocio.listar((Usuario)Session["user"]);
+            //  Session.Add("user", userNuevo);
+
+            Response.Redirect("/Default.aspx", false);
         }
     }
 	

@@ -30,21 +30,36 @@ namespace Catalogo
 
 				if (negocioU.Login(user))
 				{
-					Session.Add("user", user);
+					Session.Add("user", negocioU.listar(user));				
 					Response.Redirect("MiPerfil.aspx", false);
 				}
 				else
 				{
-					Session.Add("error", "User o Pass incorrectos");
-					Response.Redirect("Error.aspx", false);
+                    txtregistro.Visible = true;
+                   // Session.Add("error", "User o Pass incorrectos");
+					//Response.Redirect("Error.aspx", false);
 				}
 
             }
 			catch (Exception ex)
 			{
-
-				throw ex;
+				Session.Add("error", ex.ToString());
+				Response.Redirect("Error.aspx", false);
 			}
         }
+
+        protected void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+               if (txtregistro.Visible == true)
+                    txtregistro.Visible = false;
+
+        }
+
+     /*   protected void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+             if (txtregistro.Visible == true)
+                  txtregistro.Visible = false;
+
+        }*/
     }
 }

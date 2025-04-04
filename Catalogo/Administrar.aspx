@@ -27,8 +27,8 @@
                     <asp:Label Text="Campo" ID="lblCampo" runat="server" />
                     <asp:DropDownList runat="server" AutoPostBack="true" CssClass="form-control" id="ddlCampo" OnSelectedIndexChanged="ddlCampo_SelectedIndexChanged">
                         <asp:ListItem Text="Nombre" />
-                        <asp:ListItem Text="Tipo" />
-                        <asp:ListItem Text="Número" />
+                        <asp:ListItem Text="Categoria" />
+                        <asp:ListItem Text="Precio" />
                     </asp:DropDownList>
                 </div>
             </div>

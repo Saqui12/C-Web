@@ -11,7 +11,8 @@ namespace Catalogo
 {
 	public partial class Productos : System.Web.UI.Page
 	{
-		protected void Page_Load(object sender, EventArgs e)
+        public bool FiltroAvanzado { get; set; }
+        protected void Page_Load(object sender, EventArgs e)
 		{
 			NegocioArticulos negocio = new NegocioArticulos();
 			Session.Add("listaProductos", negocio.listarConSP());
@@ -30,17 +31,46 @@ namespace Catalogo
 
         protected void ddlCampo_SelectedIndexChanged(object sender, EventArgs e)
         {
+            ddlCriterio.Items.Clear();
+            if (ddlCampo.SelectedItem.ToString() == "Precio")
+            {
+                ddlCriterio.Items.Add("Igual a");
+                ddlCriterio.Items.Add("Mayor a");
+                ddlCriterio.Items.Add("Menor a");
+            }
+            else
+            {
+                ddlCriterio.Items.Add("Contiene");
+                ddlCriterio.Items.Add("Comienza con");
+                ddlCriterio.Items.Add("Termina con");
+            }
 
         }
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                NegocioArticulos negocio = new NegocioArticulos();
+                dgvProductos.DataSource = negocio.filtrar(
+                    ddlCampo.SelectedItem.ToString(),
+                    ddlCriterio.SelectedItem.ToString(),
+                    txtFiltroAvanzado.Text);
+         
+                dgvProductos.DataBind();
+            }
+            catch (Exception ex)
+            {
+                Session.Add("error", ex);
+                throw;
+            }
 
         }
 
         protected void chkAvanzado_CheckedChanged(object sender, EventArgs e)
         {
-
+            FiltroAvanzado = chkAvanzado.Checked;
+            txtFiltro.Enabled = !FiltroAvanzado;
         }
     }
 }

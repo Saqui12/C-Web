@@ -22,19 +22,34 @@ namespace Catalogo
 			try
 			{
                 Usuario nuevoUser = new Usuario();
-                NegocioUsuario negocio = new NegocioUsuario();
+                NegocioUsuario negocio = new NegocioUsuario();				
                 nuevoUser.Email = txtEmail.Text;
-				nuevoUser.Pass = txtPassword.Text;
-				nuevoUser.Id= negocio.insertarUsuario(nuevoUser);
-				Session.Add("usuario", nuevoUser);
+				if (!negocio.ExisteEmail(nuevoUser))
+				{
+                    nuevoUser.Pass = txtPassword.Text;
+                    nuevoUser.Id = negocio.insertarUsuario(nuevoUser);
+                    Session.Add("usuario", nuevoUser);
+                    Response.Redirect("Default.aspx", false);
+                }
+                else
+                {
+                    txtregistro.Visible = true;
+                }
 
-                Response.Redirect("Default.aspx", false);
 
             }
 			catch (Exception ex)
 			{
 
                 Session.Add("error", ex.ToString());
+            }
+        }
+
+        protected void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+            if(txtregistro.Visible == true)
+            {
+                txtregistro.Visible = false;
             }
         }
     }
