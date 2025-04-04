@@ -11,6 +11,7 @@ namespace Catalogo
 {
 	public partial class Productos : System.Web.UI.Page
 	{
+        
         public bool FiltroAvanzado { get; set; }
         protected void Page_Load(object sender, EventArgs e)
 		{
