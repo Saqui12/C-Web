@@ -54,12 +54,5 @@ namespace Catalogo
                     txtregistro.Visible = false;
 
         }
-
-     /*   protected void txtPassword_TextChanged(object sender, EventArgs e)
-        {
-             if (txtregistro.Visible == true)
-                  txtregistro.Visible = false;
-
-        }*/
     }
 }

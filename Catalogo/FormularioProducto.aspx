@@ -1,6 +1,26 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Mimaster.Master" AutoEventWireup="true" CodeBehind="FormularioProducto.aspx.cs" Inherits="Catalogo.FormularioProducto" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+            <script>
+                function validarEntradas() {
+
+                    let txtnombre = document.getElementById("txtNombre");
+                    let txtprecio = document.getElementById("txtPrecio");
+                    if (txtnombre.value == "") {
+                        txtnombre.classList.add("is-invalid");
+                        return false;
+                    } else {
+                        txtnombre.classList.add("is-valid");
+                    }
+                    if (txtprecio.value == "") {
+                        txtprecio.classList.add("is-invalid");
+                        return false;
+                    } else {
+                        txtprecio.classList.add("is-valid");
+                    }
+                    return true
+                }
+            </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" CssClass="container" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
@@ -12,7 +32,7 @@
             </div>
             <div class="mb-3">
                 <label for="txtNombre" class="form-label">Nombre: </label>
-                <asp:TextBox runat="server" ID="txtNombre" CssClass="form-control" />
+                <asp:TextBox ClientIdMode="Static" runat="server" ID="txtNombre" CssClass="form-control" />
             </div>
             <div class="mb-3">
                 <label for="txtCodigo" class="form-label">Codigo </label>
@@ -28,10 +48,10 @@
             </div>
             <div class="mb-3">
                 <label for="txtPrecio" class="form-label">Precio </label>
-                <asp:TextBox runat="server" ID="txtPrecio" CssClass="form-control" />
+                <asp:TextBox runat="server" ClientIdMode="Static" ID="txtPrecio" CssClass="form-control" />
             </div>
             <div class="mb-3">
-                <asp:Button Text="Aceptar" ID="btnAceptar" CssClass="btn btn-primary " OnClick="btnAceptar_Click" runat="server" />
+                <asp:Button Text="Aceptar" ID="btnAceptar" CssClass="btn btn-primary " OnClientClick="return validarEntradas()" OnClick="btnAceptar_Click" runat="server" />
                 <%if (Negocio.Seguridad.esAdmin(Session["user"]))
                     {  %>
                          <asp:Button Text="Eliminar" ID="btnEliminar" OnClick="btnEliminar_Click1" CssClass="btn btn-danger m-3 ms-5" runat="server" />

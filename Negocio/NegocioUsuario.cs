@@ -138,7 +138,7 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("Select UrlImagenPerfil,Nombre,Apellido,Id from USERS where email = @email And pass = @pass");
+                datos.setearConsulta("Select UrlImagenPerfil,Nombre,Apellido,Id,admin from USERS where email = @email And pass = @pass");
                 datos.setearParametro("@email", user.Email);
                 datos.setearParametro("@pass", user.Pass);
                 datos.ejecutarLectura();
@@ -152,6 +152,7 @@ namespace Negocio
                     if (!(datos.Lector["Apellido"] is DBNull))
                         aux.Apellido = (string)datos.Lector["Apellido"];
                     aux.Id = (int)datos.Lector["Id"];
+                    aux.Admin = (bool)datos.Lector["admin"];
                 }
 
                 aux.Email = user.Email;

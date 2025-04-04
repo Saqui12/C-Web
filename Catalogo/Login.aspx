@@ -67,6 +67,6 @@
 
         </div>
     </div>
-           </ContentTemplate>
-                            </asp:UpdatePanel>
+   </ContentTemplate>
+  </asp:UpdatePanel>
 </asp:Content>
