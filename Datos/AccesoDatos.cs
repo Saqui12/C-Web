@@ -20,8 +20,9 @@ namespace Datos
         }
         public AccesoDatos()
         {
-            //conexion = new SqlConnection(ConfigurationManager.AppSettings["cadenaConexion"]);
+            // conexion = new SqlConnection(ConfigurationManager.AppSettings["cadenaConexion"]);
              conexion = new SqlConnection("server=.\\SQLEXPRESS; database=CATALOGO_WEB_DB; integrated security=true");
+           // conexion = new SqlConnection("workstation id=CATALOGO_DB_WEB12.mssql.somee.com;packet size=4096;user id=Saqui_SQLLogin_2;pwd=smkuxmw1m5;data source=CATALOGO_DB_WEB12.mssql.somee.com;persist security info=False;initial catalog=CATALOGO_DB_WEB12;TrustServerCertificate=True");
             comando = new SqlCommand();
         }
 

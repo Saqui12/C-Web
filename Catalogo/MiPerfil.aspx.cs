@@ -38,12 +38,6 @@ namespace Catalogo
 
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
-           /* Page.Validate();
-            if (!Page.IsValid)
-            {
-                return;
-            }*/
-               
             
             NegocioUsuario negocio = new NegocioUsuario();
             Usuario user = (Usuario)Session["user"];
@@ -63,9 +57,6 @@ namespace Catalogo
 
             negocio.actualizar(user);
             Session.Add("user", user);
-
-            //   Usuario userNuevo = (Usuario)negocio.listar((Usuario)Session["user"]);
-            //  Session.Add("user", userNuevo);
 
             Response.Redirect("/Default.aspx", false);
         }

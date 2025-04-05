@@ -6,7 +6,7 @@
 
                     const txtnombre = document.getElementById("txtNombre");
                     const txtprecio = document.getElementById("txtPrecio");
-                    const precioRegex = /[0-9]*\.[0-9]+/
+                    const precioRegex = /[0-9]+/
 
                     if (txtnombre.value == "") {
                         txtnombre.classList.add("is-invalid");
