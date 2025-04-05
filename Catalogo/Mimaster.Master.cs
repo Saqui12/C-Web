@@ -22,9 +22,10 @@ namespace Catalogo
 					Response.Redirect("Login.aspx", false);
 				}
 			}
-			if (Seguridad.sessionActiva(Session["user"]))
+			if (Seguridad.sessionActiva(Session["user"]) && ((Usuario)Session["user"]).ImagenPerfil != null)
 			{
-                imgAvatar.ImageUrl = "~/Images/" + ((Usuario)Session["user"]).ImagenPerfil;
+                  imgAvatar.ImageUrl = "~/Images/" + ((Usuario)Session["user"]).ImagenPerfil;
+								
 			}
 			else
 			{

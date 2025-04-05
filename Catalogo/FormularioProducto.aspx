@@ -4,20 +4,24 @@
             <script>
                 function validarEntradas() {
 
-                    let txtnombre = document.getElementById("txtNombre");
-                    let txtprecio = document.getElementById("txtPrecio");
+                    const txtnombre = document.getElementById("txtNombre");
+                    const txtprecio = document.getElementById("txtPrecio");
+                    const precioRegex = /[0-9]*\.[0-9]+/
+
                     if (txtnombre.value == "") {
                         txtnombre.classList.add("is-invalid");
                         return false;
                     } else {
                         txtnombre.classList.add("is-valid");
                     }
-                    if (txtprecio.value == "") {
+                    if (txtprecio.value == "" || !(precioRegex.test(txtprecio.value))) {
                         txtprecio.classList.add("is-invalid");
+                        console.log("entramoli")
                         return false;
                     } else {
                         txtprecio.classList.add("is-valid");
                     }
+
                     return true
                 }
             </script>
@@ -48,7 +52,7 @@
             </div>
             <div class="mb-3">
                 <label for="txtPrecio" class="form-label">Precio </label>
-                <asp:TextBox runat="server" ClientIdMode="Static" ID="txtPrecio" CssClass="form-control" />
+                <asp:TextBox runat="server" type="number" ClientIDMode="Static" ID="txtPrecio" CssClass="form-control" />
             </div>
             <div class="mb-3">
                 <asp:Button Text="Aceptar" ID="btnAceptar" CssClass="btn btn-primary " OnClientClick="return validarEntradas()" OnClick="btnAceptar_Click" runat="server" />

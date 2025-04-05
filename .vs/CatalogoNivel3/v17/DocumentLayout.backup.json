@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "Z:\\Repo Github\\CatalogoNivel3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5585CB60-5335-4A2F-8B3D-66A8BE8C6B37}|Catalogo\\Catalogo.csproj|z:\\repo github\\catalogonivel3\\catalogo\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{5585CB60-5335-4A2F-8B3D-66A8BE8C6B37}|Catalogo\\Catalogo.csproj|solutionrelative:catalogo\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{5585CB60-5335-4A2F-8B3D-66A8BE8C6B37}|Catalogo\\Catalogo.csproj|z:\\repo github\\catalogonivel3\\catalogo\\formularioproducto.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{5585CB60-5335-4A2F-8B3D-66A8BE8C6B37}|Catalogo\\Catalogo.csproj|solutionrelative:catalogo\\formularioproducto.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5585CB60-5335-4A2F-8B3D-66A8BE8C6B37}|Catalogo\\Catalogo.csproj|Z:\\Repo Github\\CatalogoNivel3\\catalogo\\productos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5585CB60-5335-4A2F-8B3D-66A8BE8C6B37}|Catalogo\\Catalogo.csproj|solutionrelative:catalogo\\productos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5585CB60-5335-4A2F-8B3D-66A8BE8C6B37}|Catalogo\\Catalogo.csproj|z:\\repo github\\catalogonivel3\\catalogo\\registrarse.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{5585CB60-5335-4A2F-8B3D-66A8BE8C6B37}|Catalogo\\Catalogo.csproj|solutionrelative:catalogo\\registrarse.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5585CB60-5335-4A2F-8B3D-66A8BE8C6B37}|Catalogo\\Catalogo.csproj|z:\\repo github\\catalogonivel3\\catalogo\\formularioproducto.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5585CB60-5335-4A2F-8B3D-66A8BE8C6B37}|Catalogo\\Catalogo.csproj|solutionrelative:catalogo\\formularioproducto.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5585CB60-5335-4A2F-8B3D-66A8BE8C6B37}|Catalogo\\Catalogo.csproj|Z:\\Repo Github\\CatalogoNivel3\\catalogo\\mimaster.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5585CB60-5335-4A2F-8B3D-66A8BE8C6B37}|Catalogo\\Catalogo.csproj|solutionrelative:catalogo\\mimaster.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5585CB60-5335-4A2F-8B3D-66A8BE8C6B37}|Catalogo\\Catalogo.csproj|Z:\\Repo Github\\CatalogoNivel3\\catalogo\\administrar.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{5585CB60-5335-4A2F-8B3D-66A8BE8C6B37}|Catalogo\\Catalogo.csproj|solutionrelative:catalogo\\administrar.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,56 +26,59 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Productos.aspx.cs",
-              "DocumentMoniker": "Z:\\Repo Github\\CatalogoNivel3\\Catalogo\\Productos.aspx.cs",
-              "RelativeDocumentMoniker": "Catalogo\\Productos.aspx.cs",
-              "ToolTip": "Z:\\Repo Github\\CatalogoNivel3\\Catalogo\\Productos.aspx.cs",
-              "RelativeToolTip": "Catalogo\\Productos.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAEAAAAAAAAAA==",
+              "Title": "Registrarse.aspx",
+              "DocumentMoniker": "Z:\\Repo Github\\CatalogoNivel3\\Catalogo\\Registrarse.aspx",
+              "RelativeDocumentMoniker": "Catalogo\\Registrarse.aspx",
+              "ToolTip": "Z:\\Repo Github\\CatalogoNivel3\\Catalogo\\Registrarse.aspx",
+              "RelativeToolTip": "Catalogo\\Registrarse.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-04-05T12:19:32.209Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormularioProducto.aspx.cs",
+              "DocumentMoniker": "Z:\\Repo Github\\CatalogoNivel3\\Catalogo\\FormularioProducto.aspx.cs",
+              "RelativeDocumentMoniker": "Catalogo\\FormularioProducto.aspx.cs",
+              "ToolTip": "Z:\\Repo Github\\CatalogoNivel3\\Catalogo\\FormularioProducto.aspx.cs",
+              "RelativeToolTip": "Catalogo\\FormularioProducto.aspx.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAASwFAAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T12:43:26.877Z"
+              "WhenOpened": "2025-04-05T12:18:57.699Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Web.config",
-              "DocumentMoniker": "Z:\\Repo Github\\CatalogoNivel3\\Catalogo\\Web.config",
-              "RelativeDocumentMoniker": "Catalogo\\Web.config",
-              "ToolTip": "Z:\\Repo Github\\CatalogoNivel3\\Catalogo\\Web.config",
-              "RelativeToolTip": "Catalogo\\Web.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-04-04T12:40:38.873Z",
+              "Title": "FormularioProducto.aspx",
+              "DocumentMoniker": "Z:\\Repo Github\\CatalogoNivel3\\Catalogo\\FormularioProducto.aspx",
+              "RelativeDocumentMoniker": "Catalogo\\FormularioProducto.aspx",
+              "ToolTip": "Z:\\Repo Github\\CatalogoNivel3\\Catalogo\\FormularioProducto.aspx",
+              "RelativeToolTip": "Catalogo\\FormularioProducto.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-04-05T12:18:42.086Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Administrar.aspx",
-              "DocumentMoniker": "Z:\\Repo Github\\CatalogoNivel3\\Catalogo\\Administrar.aspx",
-              "RelativeDocumentMoniker": "Catalogo\\Administrar.aspx",
-              "ToolTip": "Z:\\Repo Github\\CatalogoNivel3\\Catalogo\\Administrar.aspx",
-              "RelativeToolTip": "Catalogo\\Administrar.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-04-04T12:14:58.465Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Mimaster.Master.cs",
               "DocumentMoniker": "Z:\\Repo Github\\CatalogoNivel3\\Catalogo\\Mimaster.Master.cs",
               "RelativeDocumentMoniker": "Catalogo\\Mimaster.Master.cs",
               "ToolTip": "Z:\\Repo Github\\CatalogoNivel3\\Catalogo\\Mimaster.Master.cs",
               "RelativeToolTip": "Catalogo\\Mimaster.Master.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAhwCAAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAhwBsAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T07:38:00.557Z"
+              "WhenOpened": "2025-04-04T07:38:00.557Z",
+              "EditorCaption": ""
             }
           ]
         }

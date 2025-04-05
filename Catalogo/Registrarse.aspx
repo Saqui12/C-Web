@@ -7,13 +7,9 @@
             let txtpass = document.getElementById("txtPassword");
             let emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
 
-            console.log("Elemento email:", txtemail);
-            console.log("Valor email:", txtemail.value);
-
             if (!emailRegex.test(txtemail.value) || txtemail.value === "")
             {
                 txtemail.classList.add("is-invalid");
-                console.log("Valor email:", txtemail.value);
                 return false
             } else
             {
@@ -25,14 +21,12 @@
             if (txtpass.value == "")
             {
                 txtpass.classList.add("is-invalid");
-                console.log("Valor pass:", txtpass.value);
                 return false;
             } else
             {
                 txtpass.classList.remove("is-invalid");
                 txtpass.classList.add("is valid");
             }
-            console.log("paso a true");
             return true
         }
         </script>
